@@ -1,12 +1,12 @@
-#Remove Element
+# Remove Element
 
 #Problem Summary
 Given an integer array nums and an integer val, remove all occurrences of val from nums in-place and return the number k of elements that are not equal to val. The relative order of the remaining elements does not have to be preserved beyond the first k positions, and anything after index k - 1 is irrelevant.
 
-#Intuition
+# Intuition
 The array should be compacted so that every element different from val gets moved to the front with no gaps. Because we must do this in place and we do not care about what stays beyond the first k cells, a natural idea is to keep a write pointer that always indicates where the next kept element should be written. We simply scan the array once; whenever we see a value that should remain, we copy it to the current write position and advance that position. In effect, we are streaming all valid values toward the front, overwriting the discarded ones as we go, which satisfies the in-place requirement and avoids extra storage.
 
-#Approach (Two-Pointer Write-Through)
+# Approach (Two-Pointer Write-Through)
 Walk the array with an index i that reads each element exactly once. Maintain a second index index (sometimes called write or k) that tracks the next slot for a value we intend to keep. If nums[i] != val, we assign nums[index] = nums[i] and increment index. If nums[i] == val, we do nothing and continue scanning. This single pass guarantees that the first index elements are exactly the values we kept, in their original relative order, while everything after index - 1 is unspecified by the problem statement and may be ignored. The function finally returns index, which is the count of retained elements.
 
 # Correctness Argument

@@ -1,8 +1,20 @@
 # Remove Element
 
 # Problem Summary
-Given an integer array nums and an integer val, remove all occurrences of val from nums in-place and return the number k of elements that are not equal to val. The relative order of the remaining elements does not have to be preserved beyond the first k positions, and anything after index k - 1 is irrelevant.
+Given an array and a value, remove all instances of that value in-place and return the new length.
 
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+
+The order of elements can be changed. It doesn&#39;t matter what you leave beyond the new length.
+
+Example:
+
+Given nums = [3,2,2,3], val = 3,
+
+Your function should return length = 2, with the first two elements of nums being 2.
+
+
+ 
 # Intuition
 The array should be compacted so that every element different from val gets moved to the front with no gaps. Because we must do this in place and we do not care about what stays beyond the first k cells, a natural idea is to keep a write pointer that always indicates where the next kept element should be written. We simply scan the array once; whenever we see a value that should remain, we copy it to the current write position and advance that position. In effect, we are streaming all valid values toward the front, overwriting the discarded ones as we go, which satisfies the in-place requirement and avoids extra storage.
 

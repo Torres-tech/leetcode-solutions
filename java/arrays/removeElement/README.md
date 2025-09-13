@@ -1,6 +1,6 @@
 # Remove Element
 
-#Problem Summary
+# Problem Summary
 Given an integer array nums and an integer val, remove all occurrences of val from nums in-place and return the number k of elements that are not equal to val. The relative order of the remaining elements does not have to be preserved beyond the first k positions, and anything after index k - 1 is irrelevant.
 
 # Intuition

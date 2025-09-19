@@ -43,6 +43,6 @@ If we finish the loop without mismatches → return true.
 
 Each character is checked at most once, so the algorithm scales linearly with input size.
 
-*Space Complexity: O(1)
+* Space Complexity: O(1)
 
 No extra storage needed apart from a few integer pointers.

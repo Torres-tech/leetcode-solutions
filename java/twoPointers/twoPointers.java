@@ -11,7 +11,6 @@ class Solution {
             if (Character.toLowerCase(s.charAt(i)) != Character.toLowerCase(s.charAt(j)))
             return false;
             //if they are the same, keep moving
-            abc xyz abc xyz
             i++;
             j--;
         } return true;

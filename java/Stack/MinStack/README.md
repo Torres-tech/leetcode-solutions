@@ -63,14 +63,20 @@ getMin() → O(1)
 
 Time Complexity
 push()   --> O(1)
+
 pop()    --> O(1)
+
 top()    --> O(1)
+
 getMin() --> O(1)
 
 Space Complexity
 push()   --> O(1) per element
+
 pop()    --> O(1) per element
+
 top()    --> O(1) 
+
 getMin() --> O(1)
 
 Total Space Complexity    —    O(n) (for both stacks)

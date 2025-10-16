@@ -1,4 +1,3 @@
-import java.util.*;
 
 class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
@@ -16,8 +15,16 @@ class Solution {
             /*if "aet" does not exist, it creates a new ArrayList<>()
             then, .add(s) adds the current string s to that list
             */
+        
+            // manual version of computeIfAbsent
+            //if (!buckets.containsKey(key)) {      // if key doesn't exist yet
+            //    buckets.put(key, new ArrayList<>()); // create a new list
+            //}
+            
+            //buckets.get(key).add(s);              // add the string to the list
+            // .get(key) -> return value of key like .get("aet") -> return ["ate", "tea"], then .add("eat") -> ["ate","tea","eat"]
         }
-
+        
         return new ArrayList<>(buckets.values()); //buckets.values() = 
         //["eat", "tea", "are"]
         //["tan", "nat"],

@@ -65,5 +65,6 @@ Time - O(n)
 
 Each element is processed at most once by one of the pointers.
 
-Space - O(1)    
+Space - O(1)  
+  
 Only a few variables (l, r, leftMax, rightMax, res) are used; no extra arrays needed.
